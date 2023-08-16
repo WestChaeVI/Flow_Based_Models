@@ -24,5 +24,5 @@
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [Glow-TTS(2017)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/glow_tts.md)    
+## [Glow-TTS(2020)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/glow_tts.md)    
 
