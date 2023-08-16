@@ -14,15 +14,15 @@
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [SRGAN(2016)](https://github.com/WestChaeVI/GAN/blob/main/SRGAN/srgan.md)    
+## [RealNVP(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/realnvp.md)    
 
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [Pix2pix(2016)](https://github.com/WestChaeVI/GAN/blob/main/PIX2PIX/pix2pix.md)    
+## [Pix2pix(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/PIX2PIX/pix2pix.md)    
 
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [WGAN(2017)](https://github.com/WestChaeVI/GAN/blob/main/WGAN/wgan.md)    
+## [WGAN(2017)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/WGAN/wgan.md)    
 
