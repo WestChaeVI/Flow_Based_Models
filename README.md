@@ -3,7 +3,7 @@
 
 ------------------------------------------------------------------------------------------------------------    
 
-## [Normalizing Flow(2015)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normaling_Flow/normalizing_flow.md)     
+## [Normalizing Flow(2015)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normalizing_Flow/normalizing_flow.md)     
 
 + Dataset : None
 + flow_length = 40 (default)     
