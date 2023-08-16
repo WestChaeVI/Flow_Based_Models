@@ -19,10 +19,10 @@
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [Pix2pix(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/PIX2PIX/pix2pix.md)    
+## [Glow(2018)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/glow.md)    
 
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [WGAN(2017)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/WGAN/wgan.md)    
+## [Glow-TTS(2017)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/glow_tts.md)    
 
