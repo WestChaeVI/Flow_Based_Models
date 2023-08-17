@@ -9,10 +9,13 @@
 + flow_length = [2, 8, 32]     
 + Batch_size : 4096    
 + data_dim : 2
-+ iterations : 20000
-+ lr_decay : 0.999      
++ iterations : 20000      
++ optimizer : RMSProp
++ lr : 1e-5      
++ momentum : 0.9      
 
-### Table : Test energy functions    
+
+### Table : Test energy functions  = exact_log_density  
 
 <table align='center'width="800" height="500">
   <th colspan='2'>
