@@ -245,8 +245,40 @@ $$x_{I_2} \ = \ y_{I_2} \ - \ m(y_{I_1})$$
 
 ### Inpainting    
 
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/3caff31d-73a3-4c41-9bb7-57e7b28b9ea7'></p>       
 
++ Inpainting이란?    
+  > 이미지에 손실된 부분을 재구성하는 task    
+
++ Observed dimensions $x_O$을 그 값에 고정시키고, hidden dimensions $X_H$에 대한 log-likelihood를 maximize한다.   
+  - 이를 위해 **projected gradient ascent**를 사용하며, 입력 값을 원래 값 범위 내에 유지하기 위해 Gaussian Noise를 추가한다.   
+  
+  - 이 과정에서 각 iteration마다 step size는 $a_i \ = \ \frac{10}{100 + i}$로 설정했다. 이후 stochastic gradient update를 수행하게 된다. 
 
 ----------------------------------------------------------------------------------------------------       
 
-----------------------------------------------------------------------------------------------------        
+## Conclusion    
+
++ A novel architecture of highly non-linear bijective transforamtion    
+  - 논문에서 제안한 주요 아이디어는 data를 factorized 공간으로 mapping하는 매우 비선형적이면서 양뱡향(invertible) 변환을 학습하는 flexible한 아키텍처이다.     
+  - 이는 데이터의 복잡한 관계와 구조를 효과적으로 모델링할 수 있도록 도와준다.    
+
++ Learning for Maximization Log-liklehood     
+  - log-likelihood를 직접 maximize하는 framework를 사용하여 모델을 훈련한다.    
+  - 이는 학습 데이터에 가장 잘 적합한 변환을 찾는 데에 도움이 되고, 생성된 결과의 품질을 항샹시킨다.    
+
++ Efficient Ancestral Sampling    
+  - NICE는 효율적이고 unbiased ancestral sampling을 특징으로 한다.     
+  - 이는 생성된 데이터를 추출하는 과정에서 효율성과 정확성을 보장할 수 있다.   
+
++ Competitive log-likelihood results    
+  - 실험 결과로서 NICE 모델은 log-liklihood 관점에서 경쟁력 있는 performance를 보여줬다.  
+  - 이는 모델이 데이터의 분포를 효과적으로 학습하고 생성할 수 있음을 나타낸다고 볼 수 있다.   
+
++ Various approximation inference possible    
+  - 다양한 귀납 원리을 활용하여 훈련할 수 있다.    
+  - 이러한 다양성은 모델의 유연성과 확장성을 높여준다.    
+
++ Scalability through powerful approximate inference    
+  - NICE 모델은 더 복잡한 posterior distribution approximation이나 family of prior distribution을 사용하여 더 강력한 추론을 가능하게 한다.    
+  - 이는 모델의 활용성과 성능을 확장하는 열쇠이다.     
