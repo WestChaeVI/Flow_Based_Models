@@ -106,9 +106,146 @@ $$\log(p_X(x)) \ = \ \sum_{d=1}^{D} \log(p_{H_d}(f_{d}(x))) \ + \ \log \lvert \d
 
 ## Architecture    
 
+### 1. Triangular Matrix    
 
+$$\left\[\begin{matrix}
+v & 0 & 0 & 0 \\
+v & v & 0 & 0 \\
+v & v & v & 0 \\
+v & v & v & v \\
+\end{matrix} 
+\right\]$$     
+
++ Jacobian을 Triangular Matrix 형태로 만드는 것이다.   
+  - 우선 Matrix가 두 개의 삼각형으로 이루어진 형태이다.   
+  - 한쪽은 실수값을, 한 쪽은 모두 0을 갖는다.   
+
++ 이러한 Triangular Matrix는 Determinant를 구하기 쉽다는 특징이 있다.    
+  > 왜내하면, 대각 성분들의 곱으로 표현되기 때문이다.    
+
++ 따라서 함수 $f$의 jacobian이 Triangular Matrix가 되도록 구현하면 Jacobian의 Determinent를 쉽게 구할 수 있다.    
+
+### 2. Coupling Layer    
+
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/d4728b4f-e871-4537-b0f3-54d9c8681089' height='500'></p>  
+
++ Jacobian이 triangular matrix가 되도록 구성한다고 하였다. 이것을 만족하는 구조로 Coupling layer를 사용한다.    
+
++ Coupling Layer란 Input을 둘로 split한 Matrix이다.     
+
+$$y = \begin{bmatrix} y_1 \\ 
+y_2 \end{bmatrix}$$     
+
++ 그리고 나서 $y_2$는 $y_1$과 적절한 함수를 사용하여 구성해준다. 수식으로 다음과 같이 표현할 수 있다.   
+
+#### 2-1. General Coupling Layer    
+$$y_{I_1} \ = \ x_{I_1}$$     
+
+$$y_{I_2} \ = \ g(x_{I_2} ; m(x_{I_1}))$$      
+
++ 일반적인 Coupling Layer의 형태이다. 이렇게 표현되는 $y$의 jacobian은 다음과 같다.    
+  > flow의 inverse에 해당하는 것을 통해 sampling을 진행하게 된다. 그래서 단순히 g를 더하기로 정의함.   
+
+$$\frac{\partial y}{\partial x} \ = \ \begin{bmatrix} \frac{\partial y_1}{\partial x_1} & \frac{\partial y_1}{\partial x_2} \\ 
+\frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} 
+\end{bmatrix} \ = \ \begin{bmatrix} \frac{\partial}{\partial x_1}x_1 & \frac{\partial}{\partial x_2}x_1 \\ 
+\frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} 
+\end{bmatrix} \ = \ \begin{bmatrix} I & 0 \\ 
+\frac{\partial y_2}{\partial x_1} & \frac{\partial y_2}{\partial x_2} 
+\end{bmatrix}$$     
+
++ 따라서, 결과적으로 구하고자 하는 $\det (J)$는 다음과 같다. (**Motivation 두 번째 문제 해결**)      
+  >우측 하단에 해당하는 미분만 구해주면 되는 아주 쉬운 작업이 되었다.    
+
+$$\det \frac{\partial y}{\partial x} \ = \ \det \frac{\partial y_{I_2}}{\partial x_{I_2}}$$      
+
+    
+#### 2-2. Additive Coupling Layer    
+
++ 이제 첫 번째 문제점이었던 **Invertible function** 조건을 생각해보자.   
+  - 위 의 수식에서 함수 $g$를 단순히 **Additive function**(+)으로 사용해보자.   
+  - 수식은 다음과 같이 표현된다.    
+
+$$y_{I_2} \ = \ x_{I_2} \ + \ m(x_{I_1})$$     
+
+$$x_{I_2} \ = \ y_{I_2} \ - \ m(y_{I_1})$$     
+
++ 이렇게 Additive function을 사용하면 역함수도 바로 구할 수 있다.     
+
++ 또한 함수 $m$에는 invertible이나 Determinant 같은 **제약 조건**이 없다.    
+  > 즉, Deep Neural Network 같은 복잡한 함수를 사용할 수 있다는 장점이 있다.    
+  >       
+  > 논문에서는 $m$을 ReLU MLP로 사용하였다.    
+
++ 게다가 위 jacobian determinant 식을 보면 $g$를 그저 더해주는 함수로 사용했기 때문에 det 값은 1이 나온다.   
+  > $$\det \frac{\partial y_{I_2}}{\partial x_{I_2}} \ = \ 1 \ $$     
+  > **volume preserving**의 의미를 가짐   
+
+#### Combining coupling layers    
+
++ 자, 지금까지의 내용을 정리해보면      
+
+  - 기존 방식은 두 가지의 문제점을 가지고 있었음
+    > 역함수가 존재하지 않는다.    
+    > jacobian determinant를 구하기 어렵다     
+
+  - 1. Coupling Layer를 사용함으로써 두 번째 문제점인 Jacobian determinant를 간단하게 구할 수 있었다.   
+    > $$\det \frac{\partial y}{\partial x} \ = \ \det \frac{\partial y_{I_2}}{\partial x_{I_2}}$$      
+
+  - 2. Additive Layer를 사용, 즉 함수 $g$를 단순 더하기 함수로 사용하면 역함수도 바로 구할 수 있었다.   
+    > $$y_{I_2} \ = \ x_{I_2} \ + \ m(x_{I_1})$$     
+    >       
+    > $$x_{I_2} \ = \ y_{I_2} \ - \ m(y_{I_1})$$     
+
+  - 3. 게다가 함수 $m$은 Invertible이나 Determinant 같은 **제약 조건이 없기** 때문에 **DNN 같은 복잡한 함수를 사용할 수 있다는 장점**을 가진다.  
+
++ 이렇게 구성된 Coupling Layer는 복잡한 Distribution을 표현하기 위해 **3~4개의 coupling layer를 연속으로 배치**하여 구성한다.     
 
 ----------------------------------------------------------------------------------------------------       
+
+## Experiments    
+
+### Log likelihood and generation    
+
++ 저자는 **MNIST, Toronto Face Dataset(TFD), Street View House Numbers dataset(SVHN), 그리고 CIFAR-10 dataset**에 대해 학습하고 log-likelihood를 측정했다.  
+  - 학습하기 전에 dequantized preprocessing을 수행하였다.   
+     - dequantized란?   
+        > 먼저 데이터 양자화(quantization)는 연속적인 값을 유한한 수의 불연속한 값으로 표현하는 것을 의마한다.     
+        >       
+        > 이때, 양자화 level은 데이터의 정밀도를 나타낸다.     
+        >       
+        > 하지만, 양자화된 데이터는 정보의 일부가 손실되거나 왜곡될 수 있다.     
+        >       
+        > 이러한 왜곡를 최소화하고 원본 데이터와 유사한 형태로 복구하기 위해 dequantization을 사용한다.   
+        >       
+        > 즉, 양자화된 값을 다시 연속적인 값으로 변환하는 process를 말한다.    
+
+    - $\frac{1}{256}$의 uniform noise를 추가하고 [0 ~ 1]로 rescale를 수행했다.   
+    
+    - CIFAR-10 dataset에 대해서는, $\frac{1}{256}$의 uniform noise를 추가하고 [-1 ~ 1]로 rescale를 수행했다.   
+
+  - MNIST, SVHN, CIFAT-10 dataset에 대해서는 standard logistic distribution을 prior distribution을 사용하여 학습했고, TFD dataset에 대해서는 standard normal distribution을 사용했다.   
+
+  - Epochs = 1500, Adam with learning rate $10^{-3}$, momentum 0.9, $\beta_{2}$ = 0.01, $\lambda$ = 1, and $\epsilon$ = $10^{-4}$    
+    
+
++ 이렇게 학습한 NF model의 image classification dataset에 대한 log-likelihood를 측정한 결과이다.    
+
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/cf76c6ba-c920-4c14-93b6-94c05d9d4aa2'></p>     
+
++ 다음은 각 데이터셋에 대해 생성한 이미지 결과이다.   
+
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/687bc861-4a1d-4d9a-a310-aa0684f2247a'></p>      
+
++ MNIST의 경우 제법 그럴 듯하게 생성하는 것을 볼 수 있다.  
+
++ 반면에 TFD, SVHN, CIFAR-10 등 조금 더 복잡한 이미지에 대해서는 현저하게 형태가 뭉개진 모습을 볼 수 있다.   
+
++ 아직은 GANs과 같은 기존 방식 대비 저조한 성능을 보이지만, 이러한 모습은 이후 **RealNVP, GLOW** 등의 모델에서 개선된다.  
+
+### Inpainting    
+
+
 
 ----------------------------------------------------------------------------------------------------       
 
