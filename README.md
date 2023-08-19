@@ -2,7 +2,7 @@
 ## Flow based models paper summarization and implementation      
 
 ------------------------------------------------------------------------------------------------------------        
-## [NICE(2014)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/NICE/nice.md)     
+## [NICE(2014)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/NICE/README.md)     
 
 + Dataset : [MNIST](https://paperswithcode.com/dataset/mnist)     
 + data_dim : 28 * 28    
