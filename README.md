@@ -19,7 +19,7 @@
 
 ------------------------------------------------------------------------------------------------------------    
 
-## [Normalizing Flow(2015)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normalizing_Flow/normalizing_flow.md)     
+## [Normalizing Flow(2015)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normalizing_Flow/README.md)     
 
 + flow_length = [2, 8, 32]     
 + Batch_size : 4096    
