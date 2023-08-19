@@ -4,20 +4,23 @@
 ------------------------------------------------------------------------------------------------------------        
 ## [NICE(2014)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/NICE/nice.md)     
 
-+ Dataset : MNIST     
++ Dataset : [MNIST](https://paperswithcode.com/dataset/mnist)     
 + data_dim : 28 * 28    
 + hidden_dim : 1000     
 + Batch_size : 32    
 + epochs : 500      
 + optimizer : Adam     
 + lr : 0.0002      
-+ weight_decay : 0.9     
++ weight_decay : 0.9        
+
+### Result of Experiment     
+
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/ffbcb0c4-0639-4d93-b2f7-730a5593efb4' height='600' width='600'></p>   
 
 ------------------------------------------------------------------------------------------------------------    
 
 ## [Normalizing Flow(2015)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normalizing_Flow/normalizing_flow.md)     
 
-+ Dataset : None
 + flow_length = [2, 8, 32]     
 + Batch_size : 4096    
 + data_dim : 2
