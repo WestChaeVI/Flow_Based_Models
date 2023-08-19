@@ -85,15 +85,15 @@
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [RealNVP(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/realnvp.md)    
+## [RealNVP(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/README.md)    
 
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [Glow(2018)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/glow.md)    
+## [Glow(2018)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/README.md)    
 
 
 ------------------------------------------------------------------------------------------------------------       
 
-## [Glow-TTS(2020)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/glow_tts.md)    
+## [Glow-TTS(2020)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/README.md)    
 
