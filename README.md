@@ -1,5 +1,17 @@
 # Flow based models
-## Flow based models paper summarization and implementation
+## Flow based models paper summarization and implementation      
+
+------------------------------------------------------------------------------------------------------------        
+## [NICE(2014)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/NICE/nice.md)     
+
++ Dataset : MNIST     
++ data_dim : 28 * 28    
++ hidden_dim : 1000     
++ Batch_size : 32    
++ epochs : 500      
++ optimizer : Adam     
++ lr : 0.0002      
++ weight_decay : 0.9     
 
 ------------------------------------------------------------------------------------------------------------    
 
