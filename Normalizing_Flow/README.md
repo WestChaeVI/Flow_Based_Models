@@ -46,7 +46,7 @@ $$x \ \sim \ p(x)$$
 
 $$z \ \sim \ \pi(z)$$     
 
-+ $z$가 $x$를 잘 표현하는 latent variable이고, $z$의 확률 밀도 함수가 주어진다면, 일대일 mapping 함수 $x = f(x)$를 사용해서 새로운 random variable을 구할 수 있지 않을까 기대해볼 수 있다.    
++ $z$가 $x$를 잘 표현하는 latent variable이고, $z$의 확률 밀도 함수가 주어진다면, 일대일 mapping 함수 $x = f(z)$를 사용해서 새로운 random variable을 구할 수 있지 않을까 기대해볼 수 있다.    
 
 + 그리고, 그 함수 $f$가 **invertible**하다고 가정한다면, $z = f^{-1}(x)$ 도 가능할 것이다.   
 
