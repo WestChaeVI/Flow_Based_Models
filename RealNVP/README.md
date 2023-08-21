@@ -167,14 +167,49 @@ $$( \prod_{i} (\tilde{\sigma}_{i}^2 + \epsilon ) )^{-\frac{1}{2}}$$
 
 ## Experiments    
 
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/5d460a79-614b-4f6a-9bb7-972ef11f5a2a'></p>      
 
++ 평가지표 : **Bits/dim** (Bits per Dimension)   
+  > bits per dimension은 생성된 데이터의 각 차원을 인코딩하는 데 필요한 비트 수를 의미.     
+  >      
+  > 이 값이 낮을수록 모델이 더 좋은 품질의 데이터를 생성한다는 것을 나타낸다.      
+  >       
+  > 따라서 낮은 Bits/dim 값은 생성된 데이터가 실제 데이터 분포에 더 가깝게 모사되었다는 것을 나타내며, 이는 생성 모델의 성능이 높다는 것을 의미하게 된다.      
+
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/bc7e3278-3553-4dc7-8980-c5bad39ea397' height='600'></p>    
+
++ scaling function $s(\cdot)$ : $Tanh(\cdot)$   
++ translation function $t(\cdot)$ : affine output   
++ prior $p_Z$ : isotropic unit norm Gaussian    
++ batch_size : 64    
++ Adam optimizer with default hyperparameters    
++ $L_2$ regularization on the wieght scale parameters with coefficient $5 \cdot 10^{-5}$      
+
+### Result   
+
++ Table 1. 에서 볼 수 있듯이, bits/dim 은 Pixel RNN 기준보다는 개선되지 않았지만, 다른 생성 모델과 경쟁력 있는 결과를 보여준다.    
+
++ 파라미터 수가 증가할수록 모델 성능이 좋아진다는 것을 알았다.    
+
++ CelebA dataset의 경우 완전히 이상한 smaple을 출력하기도 한다.   
+
++ 다만, VAE와 달리, RealNVP는 전역적으로 일관되면서도 선명하다.   
+
++ 저자의 가설은 실제 NVP가 낮은 주파수 구성 요소보다 높은 주파수 구성 요소를 더 강조하는 L2 노름과 같은 고정된 형식의 재구성 비용에 의존하지 않기 때문이다.     
+
++ Auto regressive model과 달리, RealNVP 모델에서의 샘플링은 입력 차원을 병렬로 처리하기 때문에 매우 효율적으로 수행된다.      
+
++ Imagenet과 LSUN에서 우리 모델은 배경/전경 개념과 조명 상호작용(밝기, 일관된 광원 방향)을 잘 캡처한 것으로 보인다.   
 
 -------------------------------------------------------------          
 
+## Discussion and Conclusion    
 
--------------------------------------------------------------          
++ 논문에서 제안한 RealNVP 모델은 비선형 변환과 반전(affine coupling) 레이어를 결합하여 고차원 데이터를 모델링하는 강력한 생성 모델임을 입증했다.    
 
--------------------------------------------------------------          
++ 생성된 샘플은 주요한 이미지 데이터셋에서 고품질로 나타났으며, 이미지의 지역적 상관 관계와 구조를 효과적으로 학습하였다.     
+  - 이와 함께, RealNVP는 생성된 샘플이 전역적으로 일관되고 선명하게 나타나는 특징을 보여주었다.    
 
--------------------------------------------------------------          
+  - 특히 Imagenet과 LSUN 데이터셋에서는 배경/전경과 조명과 같은 중요한 시각적 개념을 잘 학습한 것으로 나타났다.     
 
++ 비선형 변환을 사용하면 복잡한 분포를 모델링할 수 있으며, 반전 레이어를 통해 조건부 밀도를 계산하기에도 효과적이다.      
