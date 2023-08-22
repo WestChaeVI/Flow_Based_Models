@@ -87,6 +87,36 @@
 
 ## [RealNVP(2016)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/README.md)    
 
++ dataset : [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
++ batch_size : 64     
++ lr : 1e-3      
++ max_grad_norm : 100     
++ num_epochs : 100     
++ num_samples : 64       
++ weight_decay : 5e-5      
+
+<table align='center'>
+  <th>
+    <p align='center'>epoch 30</p>
+  </th>
+  <th>
+    <p align='center'>epoch 50</p>
+  </th>
+  <th>
+    <p align='center'>epoch 100</p>
+  </th>
+  <tr>
+    <td>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/65b4798e-46ac-4488-b6fe-e309da96b3d3'></p> 
+    </td>
+    <td>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8c4e265a-eae7-4efc-8845-867814fd01fc'></p> 
+    </td>
+    <td>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8d35b8cb-9236-402b-9d27-b5f2607b5749'></p> 
+    </td>
+  </tr>
+</table>     
 
 ------------------------------------------------------------------------------------------------------------       
 
