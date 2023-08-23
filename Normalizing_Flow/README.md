@@ -2,7 +2,8 @@
 
 --------------------------------------------------------------------------------------------------------       
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/b52d200b-3570-4531-b6be-59556f6b9126'height='500'></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/c956b3e7-93aa-465b-83b7-c7841189da7b'height='500'></p>      
+
 
 --------------------------------------------------------------------------------------------------------        
 
@@ -104,7 +105,7 @@ $$ J \ = \ \frac{dY}{dX} \ = \ \left\[\begin{matrix}
 
 + Normalizing Flow는 단순한 확률 분포에서부터 일련의 역변환 함수를 적용하여 점차 복잡한 확률 분포로 변환해 나간다.     
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/4be9c0e3-24a4-4c61-846a-4017b42eae27'></p>         
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/2b0e2809-9294-431e-a16e-c725391cd807'></p>         
 
 + 위 그림의 정의에 따르면 다음과 같이 나타낼 수 있다.    
 $$Z_{i-1} \ \sim \ p_{i-1}(Z_{i-1})$$        
@@ -218,13 +219,14 @@ NICE
   </tr>
   <tr>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/f65951b2-4653-4e9c-aec0-c5a9a608bdd2'></p>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/3e5cd3a5-80e0-4a3c-ae8f-7703c6fffc32'></p>
     </td>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/55ac9d52-5cab-48f1-9e85-0bce11edb96d'></p>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/6e0b8449-4baf-42de-8c6d-dd0ce42d9d92'></p>
     </td>
   </tr>
 </table>        
+
 
 + 일반적으로 사용되는 posterior approximation으로 잡아낼 수 없는 분포(multi-modal 및 주기성과 같은 특성을 가진)를 보여주는 4 가지 examples에 대한 true distribution을 보여준다.   
 
