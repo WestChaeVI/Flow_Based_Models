@@ -15,7 +15,7 @@
 
 ### Result of Experiment     
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/a3fe74c0-7508-41c5-b25c-9a9e10512d31' height='600' width='600'></p>   
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/NICE/Img/NICE_result.png' height='600' width='600'></p>   
 
 
 ------------------------------------------------------------------------------------------------------------    
@@ -82,7 +82,7 @@
 ### Result of Experimnets     
 
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/5893f2db-0dcb-4b8b-92da-b0aeccc30582' height='600' width='800'></p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Normalizing_Flow/img/NF_result.png' height='600' width='800'></p>     
 
 
 ------------------------------------------------------------------------------------------------------------       
@@ -109,16 +109,18 @@
   </th>
   <tr>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/RealNVP/imgs/nvp_epoch_30'></p> 
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/imgs/nvp_epoch_30.png'></p> 
     </td>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8c4e265a-eae7-4efc-8845-867814fd01fc'></p> 
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/imgs/nvp_epoch_50.png'></p> 
     </td>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8d35b8cb-9236-402b-9d27-b5f2607b5749'></p> 
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/RealNVP/imgs/nvp_epoch_100.png'></p> 
     </td>
   </tr>
 </table>     
+
+
 
 ------------------------------------------------------------------------------------------------------------       
 
@@ -138,12 +140,12 @@
 <table>
   <tr>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/0f5c1754-79eb-472b-8590-5e817243b0f9'></p>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/sample.png'></p>
     </td>
   </tr>
   <tr>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/dacad48d-2848-40dd-8b6c-3ce49c98b031'></p>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/progression.gif'></p>
     </td>
   </tr>
 </table>
