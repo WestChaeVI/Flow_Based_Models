@@ -15,7 +15,8 @@
 
 ### Result of Experiment     
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/ffbcb0c4-0639-4d93-b2f7-730a5593efb4' height='600' width='600'></p>   
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/a3fe74c0-7508-41c5-b25c-9a9e10512d31' height='600' width='600'></p>   
+
 
 ------------------------------------------------------------------------------------------------------------    
 
@@ -81,7 +82,8 @@
 ### Result of Experimnets     
 
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/67b0d080-e08c-43e6-ba98-b0faa3d3ed25' height='600' width='800'></p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/5893f2db-0dcb-4b8b-92da-b0aeccc30582' height='600' width='800'></p>     
+
 
 ------------------------------------------------------------------------------------------------------------       
 
@@ -107,7 +109,7 @@
   </th>
   <tr>
     <td>
-      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/65b4798e-46ac-4488-b6fe-e309da96b3d3'></p> 
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/RealNVP/imgs/nvp_epoch_30'></p> 
     </td>
     <td>
       <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8c4e265a-eae7-4efc-8845-867814fd01fc'></p> 
