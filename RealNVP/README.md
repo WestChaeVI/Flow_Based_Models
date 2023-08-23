@@ -45,7 +45,7 @@ $$\log ( p_X (x) ) \ = \ \log ( p_Z (f(x)) ) \ + \ \log ( \lvert \det ( \frac{\p
 
 where $\frac{\partial f(x)}{\partial x^T}$ is the Jacobian of $f$ at $x$.      
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/49fae920-a0da-40ca-8f4d-16b37737d269' width=700></p>    
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/f5b5b4e2-d579-4766-bbec-be4e429710d3' width=700></p>    
 
 + 위에서 설명했던 고차원 데이터를 우리가 원하는 직관적이고 간단한 latent space로 보내는 과정에 대한 Figure이다.    
 + data space는 어떠한 manifold를 형성하는 고차원 데이터 공간이고, 이것을 직관적이고 간단한 고차원 latent space로 보내줄 것이다.    
@@ -57,7 +57,8 @@ where $\frac{\partial f(x)}{\partial x^T}$ is the Jacobian of $f$ at $x$.
 
 ### Coupling Layer      
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/ed706048-8896-434b-a340-859626e84a4b' width=700></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/82c50440-0938-4ae1-8efa-06e99ed5effd' width=700></p>      
+
 
 + 당연하게 NICE와 마찬가지로 위에 나온 내용들을 잘 만족하도록 구조를 짜야한다.   
   - Coupling layer 형태의 layer를 통해 역함수를 구하기 쉬우며, Jacobian이 triangular matrix 형태를 띄도록 했다.   
@@ -126,7 +127,7 @@ $$y \ = \ b \odot x \ + \ (1-b) \odot ( x  \odot exp(s(b \odot x)) \ + \ t(b \od
 
 + 이때 Spatial Checkerboard Pattern과 Channel Wise Masking을 적용한다. 따라서 Input은 아래 그림과 같이 분리되게 된다.   
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/307ca407-7f44-4c63-92bd-4ff81ff3ac6d' width=700></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8342c02e-afb4-4557-958e-bacba057842f' width=700></p>      
 
 ### Combining coupling layers    
 
@@ -134,7 +135,7 @@ $$y \ = \ b \odot x \ + \ (1-b) \odot ( x  \odot exp(s(b \odot x)) \ + \ t(b \od
 
 + 이를 해결하기 이해 아래 그림과 같이 Alternating Pattern으로 Coupling Layer를 구성해준다.   
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/99d35ffa-4a6a-4a77-81f6-12e99a864042' width=700></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/d1e99c6e-b470-4aef-bc92-16c035c83995' width=700></p>      
 
 
 ### Multi-scale arichitecture   
@@ -167,7 +168,7 @@ $$( \prod_{i} (\tilde{\sigma}_{i}^2 + \epsilon ) )^{-\frac{1}{2}}$$
 
 ## Experiments    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/5d460a79-614b-4f6a-9bb7-972ef11f5a2a'></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/a36ebc26-af70-495f-b03e-a796cd2b593c'></p>      
 
 + 평가지표 : **Bits/dim** (Bits per Dimension)   
   > bits per dimension은 생성된 데이터의 각 차원을 인코딩하는 데 필요한 비트 수를 의미.     
@@ -176,7 +177,7 @@ $$( \prod_{i} (\tilde{\sigma}_{i}^2 + \epsilon ) )^{-\frac{1}{2}}$$
   >       
   > 따라서 낮은 Bits/dim 값은 생성된 데이터가 실제 데이터 분포에 더 가깝게 모사되었다는 것을 나타내며, 이는 생성 모델의 성능이 높다는 것을 의미하게 된다.      
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/bc7e3278-3553-4dc7-8980-c5bad39ea397' height='600'></p>    
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/40abeab6-3bcb-463e-bebc-24d0caa30c03' height='600'></p>    
 
 + scaling function $s(\cdot)$ : $Tanh(\cdot)$   
 + translation function $t(\cdot)$ : affine output   
