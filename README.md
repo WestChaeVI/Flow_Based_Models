@@ -123,7 +123,3 @@
 ## [Glow(2018)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/README.md)    
 
 
-------------------------------------------------------------------------------------------------------------       
-
-## [Glow-TTS(2020)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow_TTS/README.md)    
-
