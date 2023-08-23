@@ -1,6 +1,6 @@
 # [Glow: Generative Flow with Invertible 1x1 Convolutions(2018)](https://arxiv.org/pdf/1807.03039.pdf)      
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/29f70cd0-b5af-498a-8ee7-7a075611c66e'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/31f46a68-f902-4c3c-8910-f9232819231c'</p>     
 
 ---------------------------------------------------------        
 
@@ -78,8 +78,7 @@
 
 ## Proposed Generative Flow    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8e659db3-5ea4-46ec-9e9c-3bcace02f119'</p>     
-
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/1144efab-2c41-48d9-a2b5-ae93f3b0e4c5'</p>     
 
 ### Actnorm: scale and bias layer with data dependent initialization    
 
@@ -166,7 +165,7 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 + Glow에서는 invertible 1x1 conv로 이 기능을 수행하였다.     
 
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/b039f572-0171-487d-b86d-ab220dad4217'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/3038fbca-d104-4980-a449-33decdf5166d'</p>     
 
 ---------------------------------------------------------        
 
@@ -178,11 +177,11 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 
 + Adam ($\alpha = 0.001$, $\beta_1$, $\beta_2$ is default)    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/1cb509a3-286b-4bbb-8b7a-de44e6994b6b'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/12f322df-8581-4749-8b5b-3f787daab686'</p>     
 
 #### Gains using invertible 1 x 1 Convolution    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/f4520e22-5e03-4e63-904c-c71e2abe6afb'</p>    
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/ec610261-371d-4b33-a547-999e4ad90ef6'</p>    
 
 + CIFAR-10 dataset에 대해서 additive coupuling과 Affince coupling에 대해서 NLL을 비교하였고    
 
@@ -205,9 +204,7 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 + 저자가 제안한 아키텍처가 전반적으로 RealNVP 아키텍처와 경쟁력 있는지 확인하기 위해, 다양한 데이터셋에서 모델을 비교했다.    
   > Dataset : CIFAR=10, ImageNet, LSUN     
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/32a8db95-551e-493b-bb71-25a976500877)'</p>     
-
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/0c57d844-5ca0-40d7-8d2b-c16eb907195e'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/742bb82b-d801-43c9-8b08-a0fc3ec3e274)'</p>     
 
 #####  결과 해석     
 
@@ -215,13 +212,13 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 
 ---------------------------------------------------------        
 
-## Quantitative Experiments    
+## Qualitative Experiments    
 
 + 모델이 고해상도에 대응할 수 있는지, 실제적인 샘플을 생성할 수 있는지, 의미 있는 잠재 공간을 생성할 수 있는지를 연구하고자 실험을 진행.     
 
 ### Optimization details    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/134c2576-d865-415b-978e-d6f8a97a25a5'</p>    
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/c8b41ba2-7baa-4447-a83d-d3833f46629a'</p>    
 
 + 저자는 실험을 통해 reduced-Temperature model에서 sampling하는 것이 종종 고품질 샘플을 얻는 데 도움이 된다는 것을 발견하였습니다.      
   > temperature $T$로 sampling할 때, 분포 $p_{θ,T(x)} ∝ (p_θ (x))^{T^2}$에서 sampling한다.    
@@ -236,9 +233,10 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 
 ### Synthesis and Interpolation    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/e90bad59-4f3e-4136-9157-821c69b70067'</p>    
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/8bf36067-af66-4dd1-8f98-3da89a320e2d'</p>    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/e1bd5078-3ae6-40ee-9115-246ae2c194a2'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/f7601ff2-2289-4efe-bdcd-2ce52c4d85c8'</p>     
+
 
 
 + Figure 4는 Glow 모델에서 얻은 random sample을 보여준다.    
@@ -254,16 +252,16 @@ $$\log \lvert \det (\text{W}) \rvert \ = \ \text{sum} ( \log \lvert \text{s} \rv
 
 + 이는 상대적으로 적은 양의 supervision이며 모델이 훈련된 후에 수행되므로(훈련 중에는 레이블이 사용되지 않음) 다양한 대상 attributes에 대해 매우 쉽게 수행할 수 있다고 말한다.
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/9b7ec976-e9f5-4b27-9514-5f842dc30313'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/eff922bd-c4ee-462d-b01b-c6925d04f04d'</p>     
 
 ### Effect of temperature and model depth     
 
 <table align='center'>
   <td>
-    <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/efcfb9bb-a646-4c37-885b-b492cc9bca04'</p>
+    <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/6fbbd7a7-c3dc-4063-8c2e-8821c7a9c3fb'</p>
   </td>
   <td>
-    <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/69b38107-89d9-41f1-b99d-f49449a58730'</p>
+    <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/1b762d10-f59e-41a8-8169-5e67a90bcb47'</p>
   </td>
 </table>    
 
