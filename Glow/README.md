@@ -78,7 +78,7 @@
 
 ## Proposed Generative Flow    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/1144efab-2c41-48d9-a2b5-ae93f3b0e4c5'</p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/61f24401-4be6-4343-b916-f4ddc18c77bc'</p>     
 
 ### Actnorm: scale and bias layer with data dependent initialization    
 
