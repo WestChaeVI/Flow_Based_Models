@@ -121,5 +121,27 @@
 ------------------------------------------------------------------------------------------------------------       
 
 ## [Glow(2018)](https://github.com/WestChaeVI/Flow_Based_Models/blob/main/Glow/README.md)    
++ dataset : [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
++ batch_size : 16     
++ num_epochs : 200000     
++ lr : 1e-4      
++ n_block = 4      
++ n_bits = 5     
++ img_size = 64
++ temp = 0.7      
++ n_sample = 20     
 
+#### Result     
 
+<table>
+  <tr>
+    <td>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/0f5c1754-79eb-472b-8590-5e817243b0f9'></p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/dacad48d-2848-40dd-8b6c-3ce49c98b031'></p>
+    </td>
+  </tr>
+</table>
