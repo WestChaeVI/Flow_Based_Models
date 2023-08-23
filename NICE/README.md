@@ -127,7 +127,8 @@ v & v & v & v \\
 
 ### 2. Coupling Layer    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/d4728b4f-e871-4537-b0f3-54d9c8681089' height='500'></p>  
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/a0e632b2-0a07-415d-9a78-1a51663918d3' height='500'></p>  
+
 
 + Jacobian이 triangular matrix가 되도록 구성한다고 하였다. 이것을 만족하는 구조로 Coupling layer를 사용한다.    
 
@@ -231,11 +232,12 @@ $$x_{I_2} \ = \ y_{I_2} \ - \ m(y_{I_1})$$
 
 + 이렇게 학습한 NF model의 image classification dataset에 대한 log-likelihood를 측정한 결과이다.    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/cf76c6ba-c920-4c14-93b6-94c05d9d4aa2'></p>     
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/1570a43f-69e2-4d9d-b5eb-5732ba95bdcc'></p>     
 
 + 다음은 각 데이터셋에 대해 생성한 이미지 결과이다.   
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/687bc861-4a1d-4d9a-a310-aa0684f2247a'></p>      
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/19ae9227-1340-435b-8aa7-ace20a8ac6cc'></p>      
+
 
 + MNIST의 경우 제법 그럴 듯하게 생성하는 것을 볼 수 있다.  
 
@@ -245,7 +247,7 @@ $$x_{I_2} \ = \ y_{I_2} \ - \ m(y_{I_1})$$
 
 ### Inpainting    
 
-<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/3caff31d-73a3-4c41-9bb7-57e7b28b9ea7'></p>       
+<p align='center'><img src='https://github.com/WestChaeVI/Flow_Based_Models/assets/104747868/d8a97628-2b20-4ee9-af45-5da5d3275f00'></p>       
 
 + Inpainting이란?    
   > 이미지에 손실된 부분을 재구성하는 task    
